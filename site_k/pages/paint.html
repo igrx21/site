@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <canvas id="paint" width="400" height="400" style="border:  10px solid red;">
+    
+    </canvas>
+    <script>
+        let art = document.getElementById("paint");
+        let graphics = art.getContext("2d");
+        graphics.fillStyle = "#000000";
+        graphics.fillRect(10, 10, 50, 50);
+        graphics.moveTo(100,0);
+        graphics.lineTo(100,200);
+        graphics.stroke();
+    </script>
+</body>
+</html>

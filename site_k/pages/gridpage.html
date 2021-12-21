@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-rows: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 3fr 3fr 3fr 1fr;
+            grid-template-areas:
+                "d1 d1 d2 d9"
+                "d1 d1 d3 d9"
+                "d4 d5 d5 d9"
+                "d6 d7 d8 d9"
+            ;
+            height: 100vh;
+        }
+        .bg_clr
+        {
+            background-color:cornflowerblue;
+            margin: 5px;
+            
+        }
+        .d1{
+            grid-area: d1;
+        }
+        .d2{
+            grid-area: d2;
+        }
+        .d3{
+            grid-area: d3;
+        }
+        .d4{
+            grid-area: d4;
+        }
+        .d5{
+            grid-area: d5;
+        }
+        .d6{
+            grid-area: d6;
+        }
+        .d7{
+            grid-area: d7;
+        }
+        .d8{
+            grid-area: d8;
+        }
+        .d9{
+            grid-area: d9;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+    <div class="d1 bg_clr">1</div>
+    <div class="d2 bg_clr">2</div>
+    <div class="d3 bg_clr">3</div>
+    <div class="d4 bg_clr">4</div>
+    <div class="d5 bg_clr">5</div>
+    <div class="d6 bg_clr">6</div>
+    <div class="d7 bg_clr">7</div>
+    <div class="d8 bg_clr">8</div>
+    <div class="d9 bg_clr">9</div> </div>
+</body>

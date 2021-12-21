@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bigText
+        {
+            color: blueviolet;
+            background-color: black;
+            margin: auto;
+        }
+        .remove
+        {
+            display: none;
+        }
+    </style>
+    <script>
+        for(i = 0; i<=100; i++)
+        {
+            document.write("Hi!");
+        }
+        alert("Hi!")
+        console.log("Hi!")
+        function f(a)
+        {
+            document.write("!");
+        }
+        function text()
+        {
+            document.getElementById("text").classList.add("bigText");
+        }
+        function f1(event)
+        {
+            event.currentTarget.style.classList.add("remove")
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        <script>
+        document.write("Hi!");
+        </script>
+    </h1>
+    <div id="text"> 
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, ea eaque! Iusto autem voluptas, laborum nobis aperiam dolor architecto pariatur, vitae aspernatur sint illum consectetur recusandae ducimus. Laborum, quia perferendis!
+    </div>
+    <button onclick="f(10)">Кнопка</button>
+    <div>
+        <button id="btn1">Кнопка1</button>
+    </div>
+    <div>
+        <button id="btn2">Кнопка2</button>
+    </div>
+    
+    <div id="test">
+        <script>
+            document.write("Hi!");
+            document.getElementById("test").innerText="Hello!";
+            document.getElementById("btn1").click = f;
+            //document.addEventListener("click",f);
+            document.getElementById("btn2").addEventListener("click", text);
+        </script>
+    </div>
+    
+</body>
+</html>

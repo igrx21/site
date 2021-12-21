@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../style/style.css">
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <style>
+        .contacts
+        {
+            border: solid 10px aquamarine;
+            border-radius: 10px;
+            border-style:ridge;
+            width: 500px;
+            margin: auto;
+            margin-bottom: 175px;
+            display: flex;
+            height: 960px;
+        }
+        .border
+        {
+            border: solid 5px aquamarine;
+            border-radius: 5px;
+            border-style: groove;
+            width: 225px;
+        }
+    </style>
+    <script>
+        function t_change()
+        {
+            if (document.body.classList.contains("darkTheme"))
+            {
+                document.body.classList.replace("darkTheme","defaultTheme");
+            }
+            else
+            {
+                document.body.classList.replace("defaultTheme","darkTheme");
+            }
+        }
+        function checkform()
+        {   
+            naame = document.formochka.naame.value;
+            mail = document.formochka.mail.value;
+            phone_num = document.formochka.phone_num.value;
+            question_text = document.formochka.question_text.value;
+            
+        
+            let rb_value;
+            if(document.getElementById("rb1").checked)
+            {
+                rb_value="Ответ придёт по email адресу: "+mail;
+
+            }
+            else if(document.getElementById("rb2").checked)
+            {
+                rb_value="Ответ придёт по номеру телефона: "+phone_num;
+            }
+            else if(document.getElementById("rb3").checked)
+            {
+                rb_value="На вопрос не будет ответа";
+            }
+
+            console.log("naame: "+naame+"; mail: "+mail+"; phone_num: "+phone_num+"; question_text: "+question_text);
+            if (naame!="" && ((mail!="" && document.getElementById("rb1").checked) || 
+            (phone_num!="" && document.getElementById("rb2").checked) || 
+            document.getElementById("rb3").checked) && question_text!="")
+            {
+                alert("Уважаемый "+naame+", Ваш вопрос будет рассмотрен. "+rb_value+".");
+            }
+            else
+            {
+                alert("Форма заполнена неверно. Возможно вы пропустили какие-то поля!");
+            }
+        }
+        function hide(id)
+        {
+            document.getElementById("tel_div").style.display = "block";
+            document.getElementById("mail_div").style.display = "block";
+            if(id == "rb1")
+            {
+                document.getElementById("tel_div").style.display = "none";
+            }
+            else if(id == "rb2")
+            {
+                document.getElementById("mail_div").style.display = "none";
+            }
+            else if(id == "rb3")
+            {
+                document.getElementById("tel_div").style.display = "none";
+                document.getElementById("mail_div").style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="blackbg">  
+        <nav>
+            <ul class="logo">
+                <a href="../index.html">
+                    <img src="../img/anime.webp" alt="logo" width="100px">
+                    Евдокимов И.
+                </a>
+                <ul class="menu">
+                
+                    <ul class="submenu">
+                        <h5>|</h5>
+                        <a href="../index.html"> 
+                            <h4>О себе</h4>
+                        </a>
+                    </ul>
+                    <ul class="submenu">
+                        <h5>|</h5>
+                        <a href="../pages/resume.html">
+                            <h4>Резюме</h4>
+                        </a>
+                    </ul>
+                    <ul class="submenu">
+                        <h5>|</h5>
+                        <a href="../pages/portfolio.html">
+                            <h4>Портфолио</h4>
+                        </a>
+                    </ul>
+                    <ul class="submenu">
+                        <h5>|</h5>
+                        <a href="../index.html#comps">
+                            <h4>Компетенции</h4>
+                        </a>
+                    </ul>
+                    <ul class="submenu">
+                        <h5>|</h5>
+                        <a href="../pages/contacts.html">
+                            <h4>Контакты</h4>
+                        </a>
+                    </ul>
+                    <ul class="submenu">
+                        <h5>|</h5>
+                        <a href="../pages/jspractice.html">
+                            <h4>JavaScript</h4>
+                        </a>
+                    </ul>
+                    
+                </ul>
+                
+            </ul>
+        </nav>
+        <div class="intro" style="background-size: 1920px 1080px;">
+            <header style="display: flex; justify-content: space-evenly; align-items: flex-end;  width: 912px; height: 265.6px;">
+                <h1>Веб-технологии</h1>
+                <h2>Университет "Дубна"</h2>
+            </header>
+        </div>
+    </div>
+    
+    <header style="display: flex; justify-content: center;">
+    </header>
+    <main>
+    
+        <div class="wrapper_for_cont">
+
+        <section class="items">
+            <h3>Социальные сети:</h3> 
+            <div class="contact_icons">
+        <a class="footer_ico" href=""><img src="../img/vk1.png" alt="Вконтакте" width="50"></a>
+        <a class="footer_ico" href=""><img src="../img/GitHub-Mark-64px.png" alt="GitHub" width="50"></a>
+        <a class="footer_ico" href=""><img src="../img/inst.png" alt="Инстаграм" width="50"></a>
+           </div>
+        </section>
+
+        <section class="items">
+            <h3>Электронная почта:</h3>
+            <div> igorevdokimov234@gmail.com </div>
+        </section>
+
+        <section class="items">
+            <h3 class="h3_tel">Телефон:</h3>
+            <div>+7-919-676-28-76</div>
+        </section>
+
+    </div> 
+    <footer>
+        <div>
+            <a href="https://vk.com/igrxxx">
+                <img src="../img/vk.png" alt="vk" width="30">
+            </a>
+            <img src="../img/ok.png" alt="ok" width="30">
+            <img src="../img/fb.png" alt="fb" width="30">
+            <a href="https://github.com/igrx21">
+                <img src="../img/gh.png" alt="github" width="30">
+            </a>
+        </div>
+        
+        <div>Cайт разработан Евдкимовым Игорем, 2271, Copyright © 2021</div>
+    </footer>
+</body>
+</html>
